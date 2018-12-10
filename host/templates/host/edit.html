@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+<meta charset="utf-8">
+<title>edit</title>
+
+    <style>
+        label{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        div{
+            padding: 5px 0;
+        }
+    </style>
+
+</head>
+<body>
+     
+
+    <form action="/host/addresult/" method="post">
+        {% csrf_token %}
+
+
+      <p>
+        <label for="主机名">主机名：</label>
+        <input  type="text" name="name" value={{ data.name }}>
+      </p>
+      <p>
+        <label for="操作系统">操作系统：</label>
+        <input type="text" name="os" value={{ data.os }}>
+      </p>
+      <p>
+        <label for="操作系统版本">操作系统版本：</label>
+        <input type="text" name="os_v" value={{ data.os_v }}>
+      </p>
+
+      <p>
+        <label for="IP地址">内网IP地址：</label>
+        <input type="text" name="ip" value={{ data.ip }}>
+      </p>
+      <p>
+        <label for="P_IP地址">公网IP地址：</label>
+        <input type="text" name="p_ip" value={{ data.p_ip }}>
+      </p>
+      <p>
+        <label for="架构">架构：</label>
+        <input type="text" name="arch" value={{ data.arch }}>
+      </p>
+      <p>
+        <label for="内存">内存：</label>
+        <input type="text" name="mem" value={{ data.mem }}>
+      </p>
+      <p>
+        <label for="CPU">CPU：</label>
+        <input type="text" name="cpu" value={{ data.cpu }}>
+      </p>
+        <input type="submit" value="save" name="_save">
+    </form>
+   </a>
+   
+
+</body>
+{% endblock %}

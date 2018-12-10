@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>apsible api</title>
+    </head>
+    <body> 
+        
+       <h2 class="form-heading"><font size="5" face="Cicle">host list:</font></h2>
+       {% for key, value in result.items %}
+       <p>
+       {{key}}: <br />
+       &emsp;{{value}}
+       </p>
+
+      {% endfor %}
+    
+    </body> 
+
+{% endblock %}

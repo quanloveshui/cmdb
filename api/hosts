@@ -1,0 +1,4 @@
+[test]
+192.168.149.129
+192.168.149.139
+111.174.62.129  ansible_ssh_user=root ansible_ssh_pass=Axi3mx48LMVWtlUsRJO0bMM2GhuKaNrJ

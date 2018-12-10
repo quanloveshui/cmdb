@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+<meta charset="utf-8">
+<title>ansible test</title>
+</head>
+<body>
+     
+
+       <form action="/ansibleapi/result/" method="post">
+        {% csrf_token %}
+       <p>
+        <label for="host">host：</label>
+        <select name="host"> 
+            {% for key,value in result.items %}
+                {% for host in value %}
+                 <option value={{ host }}>{{ host }}</option>
+                {% endfor %}
+            {% endfor %}
+        </select>  
+        </p>
+       <p>
+        <label for="cmd">cmd：</label>
+        <input type="text" name="cmd">
+        </p>
+        <input type="submit" value="执行">
+      </form>
+
+        <a href="/ansibleapi/listhost/">
+          <button>list host</button>
+        </a>
+
+
+
+</body>
+{% endblock %}

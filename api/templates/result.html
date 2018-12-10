@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>apsible api</title>
+    </head>
+    <body>
+       <p>
+       {% for key, value in result.items %}
+           <p>
+           {{key}}: <br />
+              {% for k, v in value.items %}
+                  &emsp;{{k}}: <br />
+                  &emsp;&emsp;cmd: {{v.cmd}} <br />
+                  &emsp;&emsp;stdout: {{v.stdout}} <br />
+                  &emsp;&emsp;stderr: {{v.stderr}} <br />
+                  &emsp;&emsp;start: {{v.start}} <br />
+                  &emsp;&emsp;end: {{v.end}} <br />
+                  &emsp;&emsp;changed: {{v.changed}} <br />
+                  &emsp;&emsp;invocation: {{v.invocation}} <br />
+                  &emsp;&emsp;stdout_lines: {{v.stdout_lines}} <br />
+                  &emsp;&emsp;stderr_lines: {{v.stderr_lines}} <br />
+              {% endfor %}
+           </p>
+       {% if value == '' %}
+           &emsp;{{ value }}
+       {% else %}
+           &emsp;
+       {% endif %}
+       {% endfor %}
+      </p>
+
+    </body>
+
+{% endblock %}

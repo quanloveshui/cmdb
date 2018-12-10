@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+<meta charset="utf-8">
+<title>info</title>
+</head>
+<body>
+     
+
+
+<p>
+ 主机名：{{ data.name }}
+</p>
+<p>
+ 公网IP：{{ data.p_ip }}
+</p>
+<p>
+ 内网IP：{{ data.ip }}
+</p>
+<p>
+ 操作系统：{{ data.os }}
+</p>
+<p>
+ 操作系统版本：{{ data.os_v }}
+</p>
+<p>
+ CPU：{{ data.cpu }}
+</p>
+<p>
+ 内存：{{ data.mem }}
+</p>
+<p>
+ 架构：{{ data.arch }}
+</p>
+
+
+</body>
+{% endblock %}
