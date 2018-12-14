@@ -41,6 +41,7 @@
                                 <td>
                                     <a class="btn btn-sm btn-danger btn-delete" role="button" data-id="{{ object.id }}" data-name="{{ object.ip}}({{ object.name }})" data-toggle="tooltip" title="删除"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                     <a href="{% url 'host:edit'  id=object.id %}"  data-id="{{ object.id }}" button type="button" class="btn btn-sm btn-sucess" title="编辑"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <a href="{% url 'host:update'  id=object.id %}"  data-id="{{ object.id }}" button type="button" class="btn btn-sm btn-sucess" title="刷新"><i class="fa fa-refresh" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
                         {% empty %}

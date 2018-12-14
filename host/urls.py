@@ -11,6 +11,7 @@ urlpatterns = [
     path('delete/', views.delete, name='delete'),
     path('add/', views.add, name='add'),
     path('edit/(?P<id>\d+)/', views.edit, name='edit'),
+    path('update/(?P<id>\d+)/', views.update, name='update'),
     path('addresult/', views.addresult, name='addresult'),
     path('detalinfo/(?P<id>\d+)/', views.detalinfo, name='detalinfo'),
 ]
