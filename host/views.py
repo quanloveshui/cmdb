@@ -224,4 +224,12 @@ def update(request,id):
     return redirect(reverse('host:index'))
 
 
-
+#search主机信息
+@login_required
+def search(request):
+    if request.GET:
+        ip = request.GET['ip']
+        data = Host.objects.filter(name__contains=ip)
+        if data.count() == 0:
+            data = Host.objects.filter(p_ip__contains=ip)
+    return render(request, 'host/index.html', {'objects' : data})

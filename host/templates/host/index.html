@@ -25,7 +25,16 @@
                     <tbody>
   
 
-                      <a href="{% url 'host:add' %}" button type="button" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>&nbsp;添加</a> 
+
+                      <form  action="{% url 'host:search' %}" method="GET">
+                          
+                          <div class="col-md-3"><input type="text" class="form-control" name='ip' placeholder="主机名、IP" required></div>
+                          <button class="btn btn-sm btn-primary" type="submit">查询</button>
+                          </form>
+                          <a href="{% url 'host:add' %}" button type="button" class="btn btn-sm btn-primary">&nbsp;添加</a> 
+         
+                          
+                      
 
                         {% for object in objects %}
                             <tr>
