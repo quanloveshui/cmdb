@@ -171,6 +171,17 @@ def index(request):
 
 
 @login_required
+def homepage(request):
+    service=Host.objects.all()
+    redhat=Host.objects.filter(os='RedHat')
+    centos=Host.objects.filter(os='CentOS')
+    s_count=len(service)
+    r_count=len(redhat)
+    c_count=len(centos)
+    data = {'s_count':s_count,'r_count':r_count,'c_count':c_count}
+    return render(request, 'host/homepage.html',data)
+
+@login_required
 def delete(request):
     pk = request.GET.get("pk", 0)
     Host.objects.filter(pk=pk).delete()

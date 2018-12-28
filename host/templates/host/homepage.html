@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+<meta charset="utf-8">
+<title>info</title>
+</head>
+<body>
+     
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <div class="tile-body">
+                <table class="table table-bordered table-hover table-sm" id="platform">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>主机数量</th>
+                            <th>CentOS数量</th>
+                            <th>RedHat数量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td> {{ s_count }}</td>
+                                <td> {{ c_count }}</td>
+                                <td> {{ r_count }}</td>
+                            </tr>
+</body>     
+{% endblock %}
