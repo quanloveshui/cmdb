@@ -10,6 +10,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('delete/', views.delete, name='delete'),
     path('add/', views.add, name='add'),
+    #path('fenye/', views.fenye, name='fenye'),
     path('search/', views.search, name='search'),
     path('homepage/', views.homepage, name='homepage'),
     path('edit/(?P<id>\d+)/', views.edit, name='edit'),

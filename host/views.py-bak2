@@ -191,21 +191,10 @@ def delete(request):
 #add主机信息页面
 @login_required
 def add(request):
-    if request.POST:
-        name = request.POST['name']
-        mem = request.POST['mem']
-        cpu = request.POST['cpu']
-        os = request.POST['os']
-        ip = request.POST['ip']
-        p_ip = request.POST['p_ip']
-        arch = request.POST['arch']
-        os_v = request.POST.get('os_v','')
-        Host.create_or_replace(name, ip, arch, os, mem, cpu,p_ip,os_v)
-        return redirect(reverse('host:index'))
     return render(request, 'host/add.html')
 
 #添加信息后跳转到index页面
-"""@login_required
+@login_required
 def addresult(request):
     if request.POST:
         name = request.POST['name']
@@ -217,7 +206,7 @@ def addresult(request):
         arch = request.POST['arch']
         os_v = request.POST.get('os_v','')
     Host.create_or_replace(name, ip, arch, os, mem, cpu,p_ip,os_v)
-    return redirect(reverse('host:index'))"""
+    return redirect(reverse('host:index'))
 
 #show每个主机详细信息
 @login_required

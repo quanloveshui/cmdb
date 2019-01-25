@@ -53,6 +53,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+
+
+
 ROOT_URLCONF = 'ansible_cmdb.urls'
 
 TEMPLATES = [

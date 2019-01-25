@@ -19,7 +19,7 @@
 <body>
      
 
-    <form   method="post">
+    <form action="/host/addresult/"  method="post">
         {% csrf_token %}
       <p>
         <label for="主机名">主机名：</label>
