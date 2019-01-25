@@ -15,6 +15,6 @@ urlpatterns = [
     path('homepage/', views.homepage, name='homepage'),
     path('edit/(?P<id>\d+)/', views.edit, name='edit'),
     path('update/(?P<id>\d+)/', views.update, name='update'),
-    path('addresult/', views.addresult, name='addresult'),
+    #path('addresult/', views.addresult, name='addresult'),
     path('detalinfo/(?P<id>\d+)/', views.detalinfo, name='detalinfo'),
 ]
